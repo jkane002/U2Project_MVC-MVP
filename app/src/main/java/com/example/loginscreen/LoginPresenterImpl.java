@@ -1,12 +1,11 @@
 package com.example.loginscreen;
 
-
 import android.text.TextUtils;
 
 public class LoginPresenterImpl implements LoginPresenter
 {
     private LoginView loginView;
-    public LoginPresenterImpl(LoginView loginView)
+    LoginPresenterImpl(LoginView loginView)
     {
         this.loginView = loginView;
     }
@@ -17,12 +16,9 @@ public class LoginPresenterImpl implements LoginPresenter
             loginView.showValidationErrorMsg();
         }
         else {
-            if (username.equals("John Doe") && password.equals("password"))
-            {
+            if (username.equals("John Doe") && password.equals("password")) {
                 loginView.loginSuccessFully();
-            }
-            else
-            {
+            } else {
                 loginView.loginFail();
             }
         }

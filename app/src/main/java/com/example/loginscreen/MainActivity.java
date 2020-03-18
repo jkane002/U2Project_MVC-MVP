@@ -19,7 +19,11 @@ public class MainActivity extends AppCompatActivity implements LoginView
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initializeView();
+
+        textViewUserName = findViewById(R.id.textViewUserName);
+        textViewPassword = findViewById(R.id.textViewPassword);
+        buttonLogin = findViewById(R.id.buttonLogin);
+
         presenter = new LoginPresenterImpl(this);
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,16 +32,11 @@ public class MainActivity extends AppCompatActivity implements LoginView
             }
         });
     }
-    private void initializeView()
-    {
-        textViewUserName = findViewById(R.id.textViewUserName);
-        textViewPassword = findViewById(R.id.textViewPassword);
-        buttonLogin = findViewById(R.id.buttonLogin);
-    }
+
     @Override
     public void showValidationErrorMsg()
     {
-        Toast.makeText(this, "Username or Password is incorrect", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Username or password is empty", Toast.LENGTH_SHORT).show();
     }
     @Override
     public void loginSuccessFully()
@@ -47,6 +46,6 @@ public class MainActivity extends AppCompatActivity implements LoginView
     @Override
     public void loginFail()
     {
-        Toast.makeText(this, "User does not exist", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Username or password does not exist", Toast.LENGTH_SHORT).show();
     }
 }
