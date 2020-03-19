@@ -7,6 +7,17 @@ Unit 2 Project MVC/MVP
 
 ![File diagram](https://drive.google.com/uc?id=128QWeQwKqzK4U7uvC6M2GbB13UkdyzEv)
 
+a. Login Success
+
+![Success](https://drive.google.com/uc?id=1uNg5UsJk_Ko7n7bDq50QyEDo91n-r9Zl)
+
+b. Login doesn't exist
+
+![alt text](https://drive.google.com/uc?id=1um5revSEIA_oNX0yTmR0c3YTAGDBygCC)
+
+c. Field is empty
+![Empty](https://drive.google.com/uc?id=1iL8s1o7H86TSsWtzQLOOdnxkUaiX92qS)
+
 
 **Differences between MVC and MVP:**
 
